@@ -77,6 +77,9 @@ export class PomodoroService {
 		dto: Partial<PomodoroRoundDto>,
 		roundId: number,
 	) {
+
+		console.log('updateRound');
+		
 		return this.prisma.pomodoroRound.update({
 			where: {
 				id: roundId
