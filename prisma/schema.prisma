@@ -60,8 +60,9 @@ model TimeBlock {
   updatedAt DateTime @default(now()) @updatedAt @map("updated_at")
 
   name     String
-  color    Priority?
-  duration Int       @default(1)
+  color   String?
+  duration Int     
+  order Int       @default(1)
 
   user User @relation(fields: [userId], references: [id])
 
